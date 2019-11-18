@@ -59,8 +59,6 @@ def inference(new_document, corpus_wide, num_topics, iteration, alpha, beta):
         corpus_wide_by_topic[chosen_topic] += 1
         word_topic_map[word + '_' + str(ind)] = chosen_topic
 
-    print(word_topic_map)
-
     while iteration > 0:
         for ind in range(0, len(doc_list)):
             word = doc_list[ind]
@@ -102,10 +100,10 @@ def inference(new_document, corpus_wide, num_topics, iteration, alpha, beta):
             corpus_wide[word][max_prob[0]] += 1
             corpus_wide_by_topic[max_prob[0]] += 1
 
-            if max_prob[0] != chosen_topic:
-                print("Topic change!! " + word + " from " + str(chosen_topic) + " to " + str(max_prob[0]))
-            
-            print(iteration)
+            #FOR DEBUGGING PURPOSE
+            # if max_prob[0] != chosen_topic:
+                # print("Topic change!! " + word + " from " + str(chosen_topic) + " to " + str(max_prob[0]))
+
             iteration -= 1
 
     return word_topic_map, document_topic_distribution

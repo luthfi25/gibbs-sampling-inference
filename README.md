@@ -1,7 +1,7 @@
 # gibbs-sampling-inference
 Gibbs Sampling Inference Tool, used to perform inference on unseen corpus based on Collapsed Gibbs Sampling method. (Hopefully) Suitable for every Topic Model Algorithm. [Reference](https://www.coursera.org/lecture/ml-clustering-and-retrieval/a-worked-example-for-lda-deriving-the-resampling-distribution-O35EG)
 
-**Neccesary File**
+**Neccesary Items**
 * Corpus Wide: Collapsed Gibbs Sampling result of corpus based on Topic Model inference from original document. 
 * Vocabulary: List of all vocabulary from original corpus with its ID.
 * New Document:  Unseen document, its latent topics will be revealed.
